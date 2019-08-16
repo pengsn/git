@@ -13,6 +13,14 @@ git基本命令总结
 
 . git pull 更新代码
 
+. git pull origin master
+
+. git remote -v 远程服务器地址查看
+
+. git remote remove origin http://xxx 删除远程服务地址
+
+. git remote add origin http://xxx 添加远程服务地址 
+
 
 日志查看
 . git log 查看所有日志
