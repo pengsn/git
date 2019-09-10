@@ -41,3 +41,9 @@ gitk git提交日志的可视化工具
 创建并切换分支命令: git checkout -b + 分支名称
 
 分支合并命令: git checkout master  git merge master develop 快捷命令:(git checkout master 仓库)
+
+
+问题及解决方式:
+1. refusing to merge unrelated histories 
+遇到无法提交的问题，一般先pull 也就是使用 git pull origin master 这里的 origin 就是仓库，而 master 就是需要上传的分支，因为两个仓库不同，发现 git 输出 refusing to merge unrelated histories 无法 pull 内容
+因为他们是两个不同的项目，要把两个不同的项目合并，git需要添加一句代码，在 git pull 之后，这句代码是在git 2.9.2版本发生的，最新的版本需要添加 --allow-unrelated-histories 告诉 git 允许不相关历史合并
